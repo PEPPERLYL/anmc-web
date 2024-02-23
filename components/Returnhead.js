@@ -34,7 +34,7 @@ const Returnhead = () => {
       <div>
         <Link href="/" className="flex items-center justify-center gap-2">
           <span>Return</span>
-          <span className="text-xl font-bold">
+          <span className="text-xl font-bold hover:text-[#]">
             <IoReturnUpBackOutline />
           </span>
         </Link>

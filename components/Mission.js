@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import missionimg from "../public/mission.png";
 import Image from "next/image";
-import wave from "../public/wave.png";
 const Mission = () => {
   return (
     <div className="relative flex">
@@ -30,7 +29,6 @@ const Mission = () => {
             className=" flex flex-col items-center py-4"
           >
             <p className="text-3xl font-semibold">OUR MISSION</p>
-            <Image src={wave} alt="Wave" className="my-2 px-4" />
           </motion.div>
           <div>
             <motion.p

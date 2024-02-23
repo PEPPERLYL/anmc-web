@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import visionimg from "../public/vision.png";
-import wave from "../public/wave.png";
 
 const Vision = () => {
   return (
@@ -39,7 +38,6 @@ const Vision = () => {
             className="flex flex-col items-center"
           >
             <p className="text-3xl font-semibold">OUR VISION</p>
-            <Image src={wave} alt="Wave" className="my-2 px-4 " />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
