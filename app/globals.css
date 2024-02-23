@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define the rainbow colors using custom CSS variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --border-color-1: #ff0000; /* Red */
+  --border-color-2: #0000ff; /* Blue */
+  --border-color-3: #ffff00; /* Yellow */
+  --border-color-4: #00ff00; /* Green */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+/* Apply the rainbow border */
+.border-rainbow {
+  border-image: linear-gradient(
       to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+      var(--border-color-1),
+      var(--border-color-2),
+      var(--border-color-3),
+      var(--border-color-4)
     )
-    rgb(var(--background-start-rgb));
+    1;
+  border-image-slice: 1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: background-color 0.3s ease; /* Smooth transition for the background color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-header.scrolled {
+  background-color: #fefefe;
 }
