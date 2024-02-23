@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import map from "../assets/Africa.svg";
+import map from "../public/Africa.svg";
 
 const Ecosystem = () => {
   const regions = [

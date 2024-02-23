@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import visionimg from "../assets/vision.png";
-import wave from "../assets/wave.png";
+import visionimg from "../public/vision.png";
+import wave from "../public/wave.png";
 
 const Vision = () => {
   return (

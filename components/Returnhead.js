@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../public/anmc-logo.png";
 import Link from "next/link";
+import { IoReturnUpBackOutline } from "react-icons/io5";
 const Returnhead = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
@@ -31,7 +32,12 @@ const Returnhead = () => {
         </p>
       </div>
       <div>
-        <Link href="/">Return</Link>
+        <Link href="/" className="flex items-center justify-center gap-2">
+          <span>Return</span>
+          <span className="text-xl font-bold">
+            <IoReturnUpBackOutline />
+          </span>
+        </Link>
       </div>
     </header>
   );

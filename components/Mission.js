@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import missionimg from "../assets/mission.png";
+import missionimg from "../public/mission.png";
 import Image from "next/image";
-import wave from "../assets/wave.png";
+import wave from "../public/wave.png";
 const Mission = () => {
   return (
     <div className="relative flex">

@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import heroimg1 from "../assets/Hero-Image-1.png";
-import heroimg2 from "../assets/Hero-Image-2.png";
-import heroimg3 from "../assets/Hero-Image-3.png";
-import heroimg4 from "../assets/Hero-Image-4.png";
-import heroimg5 from "../assets/Hero-Image-5.png";
-import heroimg6 from "../assets/Hero-Image-6.png";
-import heroimg7 from "../assets/Hero-Image-7.png";
-import heroimg8 from "../assets/Hero-Image-8.png";
+import heroimg1 from "../public/Hero-Image-1.png";
+import heroimg2 from "../public/Hero-Image-2.png";
+import heroimg3 from "../public/Hero-Image-3.png";
+import heroimg4 from "../public/Hero-Image-4.png";
+import heroimg5 from "../public/Hero-Image-5.png";
+import heroimg6 from "../public/Hero-Image-6.png";
+import heroimg7 from "../public/Hero-Image-7.png";
+import heroimg8 from "../public/Hero-Image-8.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const Hero = () => {

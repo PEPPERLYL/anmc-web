@@ -2,18 +2,18 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import attend01 from "../assets/attend01.png";
-import attend02 from "../assets/attend02.png";
-import attend03 from "../assets/attend03.png";
-import attend04 from "../assets/attend04.png";
-import attend05 from "../assets/attend05.png";
-import attend06 from "../assets/attend06.png";
-import attend07 from "../assets/attend07.png";
-import attend08 from "../assets/attend08.png";
-import attend09 from "../assets/attend09.png";
-import attend10 from "../assets/attend10.png";
-import attend11 from "../assets/attend11.png";
-import attend12 from "../assets/attend12.png";
+import attend01 from "../public/attend01.png";
+import attend02 from "../public/attend02.png";
+import attend03 from "../public/attend03.png";
+import attend04 from "../public/attend04.png";
+import attend05 from "../public/attend05.png";
+import attend06 from "../public/attend06.png";
+import attend07 from "../public/attend07.png";
+import attend08 from "../public/attend08.png";
+import attend09 from "../public/attend09.png";
+import attend10 from "../public/attend10.png";
+import attend11 from "../public/attend11.png";
+import attend12 from "../public/attend12.png";
 
 const Attend = () => {
   const attendbox = [
