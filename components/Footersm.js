@@ -45,16 +45,16 @@ const socialLink = [
 const Footersm = () => {
   return (
     <>
-      <footer className="bg-[#433CAA] lg:pt-10 lg:px-20 pt-5 px-10">
+      <footer className="bg-[#433CAA] lg:pt-10 lg:px-20 pt-5 px-5">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-white text-[28px] lg:text-[44px] font-semibold  mb-8">
+          <h1 className="text-white text-2xl lg:text-4xl font-semibold  mb-8">
             Subscribe To Our Newsletter
           </h1>
           <div className="flex mb-4">
             <Subscribe />
           </div>
           <div className="flex flex-col lg:flex-row items-center lg:gap-5 gap-2">
-            <p className="text-white font-medium text-[22px]">
+            <p className="text-white font-medium text-xl">
               Jion the community.
             </p>
             <div className="flex gap-4">

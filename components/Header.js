@@ -89,7 +89,7 @@ export default function Header({ scrollToRef }) {
       {/* Mobile menu */}
       <div
         className={`lg:hidden fixed top-0 right-0 h-full bg-white z-50 transition-all duration-500 ${
-          isMenuOpen ? "w-2/5" : "w-0"
+          isMenuOpen ? "w-2/3" : "w-0"
         }`}
         onClick={() => setIsMenuOpen(false)}
       >

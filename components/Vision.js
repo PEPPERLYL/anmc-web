@@ -5,8 +5,8 @@ import visionimg from "../public/vision.png";
 const Vision = () => {
   return (
     <>
-      <div className="flex">
-        <div className=" lg:w-2/6 w-1/3 h-[560px] lg:h-[620px]  bg-[#001E2C] flex items-center justify-end">
+      <div className="flex flex-col lg:flex-row">
+        <div className=" lg:w-5/12 w-full h-[360px] lg:h-[720px]  bg-[#001E2C] flex items-center justify-end">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{
@@ -22,11 +22,11 @@ const Vision = () => {
               alt="Vision Image"
               width={250}
               height={150}
-              className="object-cover w-full h-full py-12 lg:py-28 lg:pl-20 pl-5"
+              className="object-cover w-full h-full py-12 lg:py-28 lg:pl-20 pl-0"
             />
           </motion.div>
         </div>
-        <div className="w-2/3 lg:w-4/6 h-[560px]  lg:h-[620px] flex flex-col lg:px-10 px-2 lg:py-16 py-2 items-start">
+        <div className="w-full lg:w-7/12 h-[500px]  lg:h-[720px] flex flex-col lg:px-32 px-2 lg:py-16 py-2 lg:items-start">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{
@@ -37,7 +37,7 @@ const Vision = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <p className="text-3xl font-semibold">OUR VISION</p>
+            <p className="text-3xl lg:text-4xl font-semibold">OUR VISION</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -53,7 +53,9 @@ const Vision = () => {
               NFTs and the Metaverse stand as potent drivers for economic
               prosperity, cultural preservation, and technological excellence,
               poised to elevate our continent to a prominent global position in
-              the digital age. <br />
+              the digital age.
+            </p>
+            <p className="mt-2 text-md lg:text-lg leading-snug tracking-tight font-normal">
               To achieve these, we aim to create:
             </p>
           </motion.div>
@@ -66,22 +68,27 @@ const Vision = () => {
             }}
             viewport={{ once: true }}
           >
-            <p className="mt-3 text-md lg:text-lg leading-snug tracking-tight font-normal">
-              A vibrant community of digital creators.
-              <br /> An exquisite community of artists.
-              <br /> A robust game developers community.
-              <br /> A community of virtual world owners.
-              <br /> An investors-creators community for NFT, and game dev
-              projects.
-              <br /> A robust community of blockchain developers.
-              <br /> A refined ecosystem of Web3 - blockchain services
-              providers.
-              <br />
-              Space for a safe transition into Tech.
-              <br /> Train individuals into the Web3 ecosystem.
-              <br /> AI-driven Web3 ecosystem that automate the future
-              Realization of an inclusive digital Africa.
-            </p>
+            <div className="mt-3 text-md lg:text-lg leading-snug tracking-tight font-normal ml-5">
+              <ul className="list-disc">
+                <li>A vibrant community of digital creators.</li>
+                <li>An exquisite community of artists.</li>
+                <li>A robust game developers community.</li>
+                <li>A community of VR, AR & MR developers.</li>
+                <li>A robust community of blockchain developers.</li>
+                <li>An excellent community of metaverse investors.</li>
+                <li>
+                  A refined ecosystem of Web3 - blockchain services providers.
+                </li>
+                <li>Space for a safe transition into Tech.</li>
+                <li>Train individuals into the Web3 ecosystem.</li>
+                <li>AI-driven Web3 ecosystem that automates the future.</li>
+                <li>Realization of an inclusive digital Africa.</li>
+                <li>
+                  An investors-creators community for NFT, VR, AR, MR & game dev
+                  projects.
+                </li>
+              </ul>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -4,20 +4,18 @@ import missionimg from "../public/mission.png";
 import Image from "next/image";
 const Mission = () => {
   return (
-    <div className="relative flex">
-      <div className="w-0/3 lg:w-2/6 h-[560px] lg:h-[620px] bg-white"></div>
-      <div className="w-full lg:w-2/3 h-[560px] lg:h-[620px] bg-[#001E2C]"></div>
+    <div className="relative flex flex-col lg:flex-row">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, x: 50 }}
         whileInView={{
           opacity: 1,
-          y: 0,
-          transition: { delay: 0.3, duration: 0.5 },
+          x: 0,
+          transition: { delay: 0.5, duration: 0.5 },
         }}
         viewport={{ once: true }}
-        className="absolute inset-0 flex justify-between bg-white lg:mx-32 lg:my-32 mx-10 my-24"
+        className="w-full lg:w-8/12 h-[360px] lg:h-[520px] px-2 bg-white"
       >
-        <div className="w-full lg:w-3/4 flex flex-col items-start px-2">
+        <div className="w-full lg:w-3/4 flex flex-col items-start lg:px-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{
@@ -26,11 +24,11 @@ const Mission = () => {
               transition: { delay: 0.6, duration: 0.5 },
             }}
             viewport={{ once: true }}
-            className=" flex flex-col items-center py-4"
+            className=" flex flex-col items-center justify-center py-4"
           >
-            <p className="text-3xl font-semibold">OUR MISSION</p>
+            <p className="text-3xl lg:text-4xl font-semibold">OUR MISSION</p>
           </motion.div>
-          <div>
+          <div className="px-4">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{
@@ -41,19 +39,38 @@ const Mission = () => {
               viewport={{ once: true }}
               className="text-md lg:text-lg"
             >
-              Empowering Africa’s digital potential.
-              <br /> Uniting Minds and Fostering Innovation.
-              <br /> Pushing Creativity and Collaboration in NFTs and Metaverse
-              Web3 - Gaming Ecosystems. <br />
-              Unveiling Use Cases and Other Industry Applications.
-              <br /> Empowering Developers in Web3 Ecosystems such as NFTs,
-              Gaming, Blockchain, and Web.
-              <br /> Providing training, education, and experience for the
-              Africa Web3 Ecosystem
+              <ul className="list-disc">
+                <li>Empowering Africa’s digital potential.</li>
+                <li>Uniting Minds and Fostering Innovation.</li>
+                <li>
+                  Pushing Creativity and Collaboration in NFTs and Metaverse
+                  Web3 - Gaming Ecosystems.
+                </li>
+                <li>Unveiling Use Cases and Other Industry Applications.</li>
+                <li>
+                  Empowering Developers in Web3 Ecosystems such as NFTs, Gaming,
+                  Blockchain, and Web.
+                </li>
+                <li>
+                  Providing training, education, and experience for the Africa
+                  Web3 Ecosystem.
+                </li>
+              </ul>
             </motion.p>
           </div>
         </div>
-        <div className="hidden lg:flex lg:w-1/4 h-full">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{
+          opacity: 1,
+          x: 0,
+          transition: { delay: 0.5, duration: 0.5 },
+        }}
+        viewport={{ once: true }}
+        className="w-full lg:w-4/12 h-[360px] lg:h-[520px] bg-[#001E2C]"
+      >
+        <div className="flex justify-center lg:justify-start lg:w-3/4 p-10 lg:p-0 lg:py-20 h-full">
           <div className="h-full">
             <Image
               src={missionimg}

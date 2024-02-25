@@ -30,7 +30,10 @@ export default function Home() {
   return (
     <main className="w-full flex flex-col overflow-hidden">
       <Header scrollToRef={scrollToRef} />
-      <section ref={sectionRefs.home} className="flex flex-col gap-4 lg:gap-10">
+      <section
+        ref={sectionRefs.home}
+        className="flex flex-col gap-4 lg:gap-10 pb-5"
+      >
         <div>
           <Hero />
         </div>
@@ -42,8 +45,11 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <div ref={sectionRefs.about} className="py-10">
-          <div className="flex flex-col gap-0">
+        <div
+          ref={sectionRefs.about}
+          className="flex flex-col  lg:gap-20 lg:py-10"
+        >
+          <div className="">
             <Vision />
           </div>
           <div>

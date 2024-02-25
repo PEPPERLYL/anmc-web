@@ -33,8 +33,11 @@ const Returnhead = () => {
       </div>
       <div>
         <Link href="/" className="flex items-center justify-center gap-2">
-          <span>Return</span>
-          <span className="text-xl font-bold hover:text-[#]">
+          <span
+            className={`text-2xl cursor-pointer hover:text-blue-600 ${
+              isScrolled ? "text-black" : "text-white"
+            }`}
+          >
             <IoReturnUpBackOutline />
           </span>
         </Link>

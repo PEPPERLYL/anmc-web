@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center lg:my-20 my-16">
+      <div className="flex flex-col justify-center items-center lg:my-16 my-10">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{
@@ -12,7 +12,7 @@ const Contact = () => {
             transition: { delay: 0.2, duration: 0.5 },
           }}
           viewport={{ once: true }}
-          className="text-4xl font-bold"
+          className="text-3xl lg:text-4xl font-semibold"
         >
           Contact Us
         </motion.h1>

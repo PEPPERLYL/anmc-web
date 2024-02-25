@@ -62,19 +62,19 @@ const Hero = () => {
             transition: { delay: 0.3, duration: 0.5 },
           }}
           viewport={{ once: true }}
-          className="absolute lg:left-10 text-white"
+          className="absolute lg:left-10 px-2 text-white"
         >
-          <p className="text-6xl font-bold mb-1">Africa</p>
-          <p className="text-3xl font-semibold mb-4">
+          <p className="text-5xl lg:text-6xl  font-bold mb-1">Africa</p>
+          <p className="text-2xl lg:text-3xl font-semibold mb-4">
             NFT & Metaverse Conference
           </p>
-          <p className="flex flex-col text-xl gap-0 mb-4">
+          <p className="flex flex-col lg:text-xl text-md  gap-0 mb-4">
             <span>Unlocking Africa&apos;s Digital Future:</span>
             <span> showcasing Creativity. Made by Africa. For Africa</span>
           </p>
           <Link
             href="/register"
-            className="flex items-center justify-center bg-[#5E54EF] text-white gap-2 py-3 rounded-lg w-[160px] hover:animate-pulse hover:text-[#5E54EF] hover:bg-white "
+            className="flex items-center justify-center bg-[#5E54EF] text-white gap-2 py-3 rounded-lg lg:w-[160px] hover:animate-pulse hover:text-[#5E54EF] hover:bg-white "
           >
             Register Here
             <FaArrowRight />

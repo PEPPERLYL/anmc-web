@@ -49,32 +49,32 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row">
           {/*Left side section*/}
           <div className="flex flex-col  lg:items-start items-center my-10 ">
-            <h1 className="text-white text-[28px] lg:text-[44px] font-semibold  lg:mb-8">
-              Jion The Movement
+            <h1 className="text-white text-3xl lg:text-4xl font-semibold  lg:mb-8">
+              Join The Movement
             </h1>
             <div className="flex flex-col lg:gap-4 ">
               <Link href="/partner">
-                <p className="text-white text-[22px]">Become a speaker.</p>
+                <p className="text-white text-xl">Become a speaker.</p>
               </Link>
               <Link href="/partner">
-                <p className="text-white text-[22px]">Jion us as a partner.</p>
+                <p className="text-white text-xl">Join us as a partner.</p>
               </Link>
               <Link href="/partner">
-                <p className="text-white text-[22px]">Sponsors tickets.</p>
+                <p className="text-white text-xl">Sponsors tickets.</p>
               </Link>
             </div>
           </div>
           {/*right side section*/}
           <div className="flex flex-col lg:items-end items-center lg:my-10 mb-5 lg:mb-0 lg:ml-auto">
-            <h1 className="text-white text-[28px] lg:text-[44px] font-semibold  lg:mb-8 mb-4">
+            <h1 className="text-white text-2xl lg:text-4xl font-semibold  lg:mb-8 mb-4">
               Subscribe To Our Newsletter
             </h1>
             <div className="flex mb-4">
               <Subscribe />
             </div>
             <div className="flex flex-col lg:flex-row items-center lg:gap-5 gap-2">
-              <p className="text-white font-medium text-[22px]">
-                Jion the community.
+              <p className="text-white font-medium text-xl">
+                Join the community.
               </p>
               <div className="flex gap-4">
                 {socialLink.map((social, index) => (

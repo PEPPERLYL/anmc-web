@@ -13,7 +13,7 @@ const Events = () => {
             transition: { delay: 0.3, duration: 0.5 },
           }}
           viewport={{ once: true }}
-          className="text-center text-4xl font-semibold text-[#001E2C] "
+          className="text-center lg:text-4xl text-3xl font-semibold text-[#001E2C] "
         >
           EVENT TYPES
         </motion.p>
