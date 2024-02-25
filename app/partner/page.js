@@ -36,12 +36,12 @@ const page = () => {
           >
             Become Our Partner
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { delay: 0.5, duration: 0.5 },
+              transition: { delay: 0.6, duration: 0.5 },
             }}
             viewport={{ once: true }}
             className="text-xl mt-4"
@@ -50,25 +50,26 @@ const page = () => {
             <br /> of brands in the web3 ecosystem.
             <br />
             Who do we partner with?
-          </motion.p>
+          </motion.div>
           {/*list of partner*/}
-          <motion.ul
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { delay: 0.3, duration: 0.5 },
+              transition: { delay: 0.9, duration: 0.5 },
             }}
             viewport={{ once: true }}
-            className="mt-4 list-inside"
           >
-            {partnerlist.map((partner, index) => (
-              <li key={index} className="flex items-center gap-2">
-                <span className="text-[#5E54EF] text-2xl">&#8226;</span>
-                <span className="text-white text-xl"> {partner.title}</span>
-              </li>
-            ))}
-          </motion.ul>
+            <ul className="mt-4 list-inside">
+              {partnerlist.map((partner, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  <span className="text-[#5E54EF] text-2xl">&#8226;</span>
+                  <span className="text-white text-xl"> {partner.title}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
         <Image
           src={hero}
