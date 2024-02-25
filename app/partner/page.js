@@ -24,22 +24,51 @@ const page = () => {
       {/*hero*/}
       <div className="relative">
         <div className="absolute lg:left-20 top-20 w-full  p-4 text-white z-10">
-          <h1 className="text-4xl font-semibold">Become Our Partner</h1>
-          <p className="text-xl mt-4">
+          <motion.h1
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.3, duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className="text-4xl font-semibold"
+          >
+            Become Our Partner
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.5, duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className="text-xl mt-4"
+          >
             Brand partnership with ANMC ia a careful selection
             <br /> of brands in the web3 ecosystem.
             <br />
             Who do we partner with?
-          </p>
+          </motion.p>
           {/*list of partner*/}
-          <ul className="mt-4 list-inside">
+          <motion.ul
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.3, duration: 0.5 },
+            }}
+            viewport={{ once: true }}
+            className="mt-4 list-inside"
+          >
             {partnerlist.map((partner, index) => (
               <li key={index} className="flex items-center gap-2">
                 <span className="text-[#5E54EF] text-2xl">&#8226;</span>
                 <span className="text-white text-xl"> {partner.title}</span>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
         <Image
           src={hero}
