@@ -80,7 +80,10 @@ const Workform = () => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-      });
+      }); // Refresh the webpage after 10 seconds
+      setTimeout(() => {
+        window.location.reload();
+      }, 10000); // 10 seconds delay
     }
   };
   return (
