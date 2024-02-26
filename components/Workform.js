@@ -65,7 +65,7 @@ const Workform = () => {
       setValidationErrors(["Please enter a valid link."]);
       return;
     }
-    const added = await addDataToFireStore(email, name, company, link, message);
+    const added = await addDataToFireStore(name, email, company, link, message);
     if (added) {
       setEmail("");
       setName("");

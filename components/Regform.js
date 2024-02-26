@@ -85,7 +85,7 @@ const Regform = () => {
       return;
     }
 
-    const added = await addDataToFireStore(email, name, country, number);
+    const added = await addDataToFireStore(name, email, country, number);
     if (added) {
       setEmail("");
       setName("");

@@ -52,8 +52,8 @@ const Partnerform = () => {
       return;
     }
     const added = await addDataToFireStore(
-      email,
       name,
+      email,
       company,
       offering,
       message
