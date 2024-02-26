@@ -41,7 +41,7 @@ const Contact = () => {
       setValidationErrors(["Full name should be between 3 and 50 characters."]);
       return;
     }
-    const added = await addDataToFireStore(email, name, message);
+    const added = await addDataToFireStore(name, email, message);
     if (added) {
       setEmail("");
       setName("");
