@@ -29,7 +29,7 @@ const Mission = () => {
             <p className="text-3xl lg:text-4xl font-semibold">OUR MISSION</p>
           </motion.div>
           <div className="px-4">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{
                 opacity: 1,
@@ -56,7 +56,7 @@ const Mission = () => {
                   Web3 Ecosystem.
                 </li>
               </ul>
-            </motion.p>
+            </motion.div>
           </div>
         </div>
       </motion.div>

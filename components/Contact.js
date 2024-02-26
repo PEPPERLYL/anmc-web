@@ -1,6 +1,63 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+
+import { db } from "@/app/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+
+async function addDataToFireStore(name, email, message) {
+  try {
+    const docRef = await addDoc(collection(db, "Contact"), {
+      name: name,
+      email: email,
+      message: message,
+    });
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [validationErrors, setValidationErrors] = useState([]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Reset validation errors on each submit attempt
+    setValidationErrors([]);
+
+    // Basic email validation
+    if (!email || !email.includes("@")) {
+      setValidationErrors(["Please enter a valid email address."]);
+      return;
+    }
+
+    // Name validation
+    if (name.length < 3 || name.length > 50) {
+      setValidationErrors(["Full name should be between 3 and 50 characters."]);
+      return;
+    }
+    const added = await addDataToFireStore(email, name, message);
+    if (added) {
+      setEmail("");
+      setName("");
+      setMessage("");
+      // Show success toast
+      toast.success("Message successfully sent!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
   return (
     <>
       <div className="flex flex-col justify-center items-center lg:my-16 my-10">
@@ -17,7 +74,7 @@ const Contact = () => {
           Contact Us
         </motion.h1>
         <div className="w-full my-4">
-          <form className="w-full ">
+          <form onSubmit={handleSubmit} className="w-full ">
             <div className="">
               <div className="flex flex-col lg:flex-row lg:mx-32 mx-8 lg:gap-24">
                 <div className="flex flex-col my-5 w-full lg:w-1/2">
@@ -34,8 +91,10 @@ const Contact = () => {
                     Full Name
                   </motion.p>
                   <input
-                    type="fullname"
-                    id="fullname"
+                    type="name"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
                   />
                 </div>
@@ -55,6 +114,8 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
                   />
                 </div>
@@ -72,7 +133,13 @@ const Contact = () => {
                 >
                   Message
                 </motion.p>
-                <textarea className="h-72 w-full border rounded-xl  focus:outline-none pl-10 pt-5 text-xl" />
+                <textarea
+                  type="message"
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="h-72 w-full border rounded-xl  focus:outline-none pl-10 pt-5 text-xl"
+                />
               </div>
             </div>
             <div className="flex items-center justify-center mt-5">
@@ -84,12 +151,22 @@ const Contact = () => {
                   transition: { delay: 0.6, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
+                type="submit"
                 className="flex items-center justify-center bg-[#34ADE3] text-white gap-2 py-3 rounded-lg w-[160px] hover:animate-pulse hover:text-[#34ADE3] border-4 border-[#34ADE3] hover:bg-white "
               >
                 Submit
               </motion.button>
             </div>
+            <div className=" mt-2 flex justify-center">
+              {/*validation Error messages*/}
+              {validationErrors.map((error, index) => (
+                <p key={index} className="text-red-500 text-sm font-bold">
+                  {error}
+                </p>
+              ))}
+            </div>
           </form>
+          <ToastContainer />
         </div>
       </div>
     </>
