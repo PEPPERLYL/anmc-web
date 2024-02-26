@@ -83,7 +83,7 @@ const Workform = () => {
       }); // Refresh the webpage after 10 seconds
       setTimeout(() => {
         window.location.reload();
-      }, 10000); // 10 seconds delay
+      }, 5000); // 10 seconds delay
     }
   };
   return (
