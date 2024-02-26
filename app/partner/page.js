@@ -5,6 +5,7 @@ import Footersm from "@/components/Footersm";
 import Returnhead from "@/components/Returnhead";
 import hero from "@/public/Rectangle.gif";
 import Image from "next/image";
+import Logos from "@/components/Logos";
 const page = () => {
   const partnerlist = [
     { title: "Web3 Companies." },
@@ -61,14 +62,14 @@ const page = () => {
             }}
             viewport={{ once: true }}
           >
-            <ul className="mt-4 list-inside">
+            <div className="mt-4 list-inside">
               {partnerlist.map((partner, index) => (
-                <li key={index} className="flex items-center gap-2">
+                <div key={index} className="flex items-center gap-2">
                   <span className="text-[#5E54EF] text-2xl">&#8226;</span>
                   <span className="text-white text-xl"> {partner.title}</span>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.div>
         </div>
         <Image
@@ -88,7 +89,7 @@ const page = () => {
               transition: { delay: 0.2, duration: 0.5 },
             }}
             viewport={{ once: true }}
-            className="text-4xl font-bold"
+            className="text-3xl lg:text-4xl font-semibold"
           >
             Reach Out To Us
           </motion.h1>
@@ -208,6 +209,22 @@ const page = () => {
             </form>
           </div>
         </div>
+      </div>
+      {/*Ecosystem */}
+      <div className="flex flex-col items-center justify-center my-16 lg:my-28 gap-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 0.5 },
+          }}
+          viewport={{ once: true }}
+          className="text-3xl lg:text-4xl font-semibold mb-10"
+        >
+          Our Partnership Ecosystem
+        </motion.h1>
+        <Logos />
       </div>
       <Footersm />
     </main>
